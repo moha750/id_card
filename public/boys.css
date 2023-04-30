@@ -1,0 +1,265 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: rb1;
+  src: url(4.ttf);
+}
+
+@font-face {
+  font-family: rb0;
+  src: url(4_0.ttf);
+}
+
+@media screen and (min-width: 421px) {
+  body {
+    background-color: black;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+
+header {
+  background: linear-gradient(-45deg, rgba(255,198,10,1) 0%, rgba(0,81,178,1) 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  border-radius: 0px 0px 30px 30px;
+}
+
+#logo {
+  width: 50%;
+  margin-top: 20px;
+}
+
+#boy {
+  width: 70%;
+  margin-top: 30px;
+}
+
+header span {
+  position: absolute;
+  background: #0051B2;
+  width: 80%;
+  border: 5px solid white;
+  border-radius: 50px;
+  bottom: -30px;
+}
+
+header span h1 {
+  font-size: 170%;
+  font-family: rb0;
+  text-align: center;
+}
+
+main {
+  padding-top: 50px;
+}
+
+main section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.data {
+  width: 85%;
+  background-color: #0051B2;
+  padding: 20px 15px 7px;
+  border-radius: 20px;
+}
+
+main section span {
+  position: absolute;
+  background: #FFC60A;
+  padding: 0% 10%;
+  border: 5px solid white;
+  border-radius: 50px;
+  bottom: 62px;
+}
+
+main section h1 {
+  font-size: 185%;
+  font-family: rb0;
+}
+
+main section span h2 {
+  font-size: 140%;
+  font-family: rb1;
+  color: #0051B2;
+}
+
+footer {
+  background: linear-gradient(-45deg, rgba(255,198,10,1) 0%, rgba(0,81,178,1) 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  margin-top: 75px;
+  padding: 20px 0px 0px;
+  border-radius: 25px 25px 0px 0px;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 10px;
+  font-family: rb0;
+  font-size: 220%;
+}
+
+hr {
+  width: 80%;
+}
+
+.link {
+  display: block;
+  margin-top: 15px;
+  color: white;
+  text-decoration: none;
+  font-family: rb1;
+  font-size: 150%;
+}
+
+#socal-media {
+  margin: 25px 0px;
+}
+
+#socal-media i {
+  color: white;
+  padding: 0px 18px;
+  font-size: 180%;
+}
+
+footer h2 {
+  color: white;
+  font-family: rb0;
+  font-size: 100%;
+}
+
+footer h3 {
+  color: white;
+  font-family: rb0;
+  font-size: 100%;
+  margin-bottom: 110px;
+}
+
+.navigation {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  background: #0051B2;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.navigation .nav-list {
+  position: relative;
+  display: flex;
+  list-style: none;
+}
+
+.navigation .nav-list .list {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.navigation .nav-list .list a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.navigation .nav-list .list a .icon {
+  position: relative;
+  display: block;
+  font-size: 1.5em;
+  line-height: 75px;
+  transition: 0.5s;
+  color: white;
+}
+
+.navigation .nav-list .list.active a .icon {
+  transform: translateY(-8px);
+  color: #FFC60A;
+}
+
+.navigation .nav-list .list a:hover .icon {
+  color: white;
+}
+
+.navigation .nav-list .list a .text {
+  position: absolute;
+  font-weight: 600;
+  font-size: 0.5em;
+  letter-spacing: 0.05em;
+  color: white;
+  transition: 0.5s;
+  text-transform: uppercase;
+  transform: translateY(0px);
+  opacity: 0;
+}
+
+.navigation .nav-list .list.active a .text {
+  transform: translateY(13px);
+  opacity: 1;
+  font-family: rb1;
+  color: white;
+  font-size: 13px;
+}
+
+.indicator {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.indicator::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 11px;
+  background: #FFC60A;
+  border-radius: 10px;
+  bottom: 13px;
+}
+
+.navigation .nav-list .list:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(70px * 1));
+}
+
+.navigation .nav-list .list:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(70px * 2));
+}
+
+.navigation .nav-list .list:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(70px * 3));
+}
+
+.navigation .nav-list .list:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(70px * 4));
+}
+}

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: b;
+  src: url(4_0.ttf);
+}
+
+@font-face {
+  font-family: r;
+  src: url(4.ttf);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'b', 'r';
+}
+
+.body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(20deg, #ffc60a 0%, #0051b2 100%);
+}
+
+img {
+  width: 40%;
+  margin: 25px 0px 10px;
+}
+
+i {
+  color: #ffffff;
+  font-size: 25px;
+  margin: 0px 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
